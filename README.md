@@ -1,6 +1,6 @@
 # Nonogram
 
-### Frontend nonogram puzzle game
+## Frontend nonogram puzzle game
 
 #### Used Technologies
 * Html
