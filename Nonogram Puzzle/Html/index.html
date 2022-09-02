@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="../Js/jquery-3.6.0.min.js"></script>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font-family: 'Karla', sans-serif; -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font-family: 'Silkscreen', cursive; -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font-family: 'Fuzzy Bubbles', cursive; -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font-family: 'Qwitcher Grypen', cursive; -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font-family: 'Pacifico', cursive; -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Send+Flowers&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font-family: 'Send Flowers', cursive; -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kodchasan:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font-family: 'Kodchasan', sans-serif; -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font-family: 'Delius Swash Caps', cursive; -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font-family: 'Sacramento', cursive; -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lily+Script+One&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font-family: 'Lily Script One', cursive; -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font-family: 'Chakra Petch', sans-serif; -->
+    <!-- font -->
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="../Assets/Images/icon.ico"
+    />
+    <link rel="stylesheet" href="../Css/nonogram.css" />
+    <script src="../Js/nonogram.js"></script>
+
+    <title>Nonogram</title>
+  </head>
+
+  <body>
+    <div id="startScreenContainer">
+      <div id="startScreenTitle">Nonogram</div>
+      <div id="startScreenButtons">
+        <div id="DifficultyButtonContainer">
+          <div
+            id="DifficultyButton-Easy"
+            class="DifficultyButton"
+            onclick="changeCurDifficulty(this)"
+          >
+            Easy
+          </div>
+          <div
+            id="DifficultyButton-Medium"
+            class="DifficultyButton"
+            onclick="changeCurDifficulty(this)"
+          >
+            Medium
+          </div>
+          <div
+            id="DifficultyButton-Hard"
+            class="DifficultyButton"
+            onclick="changeCurDifficulty(this)"
+          >
+            Hard
+          </div>
+        </div>
+        <div
+          id="startScreenPlayButtonContainer"
+          onclick="startScreenStartGame()"
+        >
+          <div id="startScreenPlayButton">Generate</div>
+        </div>
+      </div>
+    </div>
+    <div id="playScreenContainer">
+      <div id="playScreenTitle">Nonogram</div>
+      <div id="playScreen">
+        <div id="tableContainer"></div>
+      </div>
+    </div>
+    <div id="endScreenContainer">
+      <div id="endScreenBox">
+        <div id="endScreenInformation">
+          Congratulations you finished the nonogram!
+        </div>
+        <div id="endScreenButtonContainer">
+          <div id="playAgainButtonContainer">
+            <div id="playAgainButtonBackground"></div>
+            <div id="playAgainButton">Play Again</div>
+          </div>
+          <div id="menuButtonContainer">
+            <div id="menuButtonBackground"></div>
+            <div id="menuButton">Menu</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

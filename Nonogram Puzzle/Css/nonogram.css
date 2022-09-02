@@ -1,0 +1,396 @@
+html,
+body {
+  user-select: none;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* START SCREEN */
+#startScreenContainer {
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  background-image: url(../Assets/Images/background.png);
+  z-index: 1;
+}
+
+#startScreenTitle {
+  font-family: "Lily Script One", cursive;
+  font-size: 100px;
+  background-color: rgba(255, 255, 255, 0.556);
+  text-shadow: 1px 2px 2px black, 5px 5px 5px red;
+}
+
+#startScreenButtons {
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  box-shadow: 10px 10px 10px black;
+  background-color: #ffbebe6d;
+  margin-top: 30px;
+  border-radius: 20px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 4px solid black;
+}
+
+#DifficultyButtonContainer {
+  width: 550px;
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.DifficultyButton {
+  width: 130px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: aliceblue;
+  border: 3px solid black;
+  border-radius: 50px;
+  transition: all 1s;
+  transform: scale(1);
+}
+
+.DifficultyButton:hover {
+  transform: scale(1.1) !important;
+}
+
+#DifficultyButton-Easy {
+  box-shadow: 2px 2px 4px black;
+  background-color: lightgreen;
+  text-shadow: 1.5px 1.5px 1.5px white;
+  transform: scale(1.2);
+}
+
+#startScreenPlayButtonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 220px;
+  height: 70px;
+}
+
+#startScreenPlayButton {
+  box-shadow: 5px 5px 3px black;
+  border-radius: 10px;
+  border: 3px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 50px;
+  background-color: rgb(255, 148, 218);
+  transition: all 700ms;
+}
+
+#startScreenPlayButtonContainer:hover #startScreenPlayButton {
+  background-color: #ff7300;
+  transform: rotateX(360deg) scale(1.2);
+  text-shadow: 2px 2px 2px red;
+}
+
+/* PLAY SCREEN */
+#playScreenContainer {
+  display: none;
+  opacity: 0;
+  position: absolute;
+
+  background-color: rgb(255, 212, 212);
+  background-image: radial-gradient(
+    circle at 50% 0%,
+    rgb(255, 255, 255),
+    rgb(16, 27, 124)
+  );
+  height: 100%;
+  width: 100%;
+
+  z-index: 0;
+  /* transition: 1s; */
+}
+
+#playScreenTitle {
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Silkscreen", cursive;
+  font-size: 400%;
+  text-shadow: -2px 2px 2px green;
+}
+
+#playScreen {
+  overflow: hidden;
+  height: 90%;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#tableContainer {
+  box-sizing: content-box;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.box {
+  box-sizing: border-box;
+  width: 50px;
+  height: 50px;
+  background-color: rgb(255, 235, 253);
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: 85%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#garbageBox {
+  background-color: rgb(221, 221, 221);
+}
+
+.boxInfoContainerColumnWise {
+  background-color: rgb(237, 255, 243);
+  border: 1px solid gray;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  width: 50px;
+  height: 150px;
+}
+
+.boxInfoContainerRowWise {
+  background-color: rgb(237, 255, 243);
+  /* background-color: rgb(201, 255, 222); */
+  border: 1px solid gray;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 150px;
+  height: 50px;
+}
+
+.InfoCountBox {
+  font-family: "Karla", sans-serif;
+  font-size: 30px;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  height: 30px;
+  width: 30px;
+  min-height: 0;
+  min-width: 0;
+}
+
+/* END SCREEN */
+#endScreenContainer {
+  display: none;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.567);
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+#endScreenBox {
+  width: 750px;
+  height: 250px;
+  background-color: rgb(247, 247, 198);
+  border-radius: 10px;
+  border: 5px solid black;
+  box-shadow: 10px 10px 10px black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#endScreenInformation {
+  font-family: "Silkscreen", cursive;
+  font-family: "Delius Swash Caps", cursive;
+  font-weight: 700;
+  font-size: 31px;
+  text-shadow: 1.1px 1.1px 1px black;
+}
+
+/* BUTTONS */
+#endScreenButtonContainer {
+  padding-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#playAgainButtonContainer {
+  cursor: pointer;
+  margin-right: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 270px;
+  height: 80px;
+  perspective: 500px;
+}
+
+#playAgainButtonBackground {
+  border-radius: 20px;
+  position: absolute;
+  width: 270px;
+  height: 80px;
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  filter: blur(10px);
+  animation-name: glowAnimationForButton;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-timing-function: linear;
+  transition: 1s;
+  outline: 11px solid black;
+}
+
+@keyframes glowAnimationForButton {
+  0% {
+    background-position: 0% 0;
+  }
+  100% {
+    background-position: 270px 0;
+  }
+}
+
+#playAgainButton {
+  position: absolute;
+  font-family: "Delius Swash Caps", cursive;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  color: black;
+  font-weight: 400;
+  background-color: black;
+  color: white;
+  width: 250px;
+  height: 60px;
+  transition: 1s;
+}
+
+#playAgainButtonContainer:hover > #playAgainButton {
+  transform: rotateY(30deg) translateZ(20px);
+  color: black;
+  background-color: rgb(177, 147, 255);
+  font-weight: 900;
+}
+#playAgainButtonContainer:hover > #playAgainButtonBackground {
+  transform: rotateY(30deg);
+}
+
+#menuButtonContainer {
+  cursor: pointer;
+  margin-left: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 270px;
+  height: 80px;
+  perspective: 500px;
+}
+
+#menuButtonBackground {
+  border-radius: 20px;
+  position: absolute;
+  width: 270px;
+  height: 80px;
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  filter: blur(10px);
+  animation-name: glowAnimationForButton2;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-timing-function: linear;
+  transition: 1s;
+  outline: 11px solid black;
+}
+
+@keyframes glowAnimationForButton2 {
+  0% {
+    background-position: 0% 0;
+  }
+  100% {
+    background-position: -270px 0;
+  }
+}
+
+#menuButton {
+  position: absolute;
+  font-family: "Delius Swash Caps", cursive;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  color: black;
+  font-weight: 400;
+  background-color: black;
+  color: white;
+  width: 250px;
+  height: 60px;
+  transition: 1s;
+}
+
+#menuButtonContainer:hover > #menuButton {
+  transform: rotateY(-30deg) translateZ(20px);
+  color: black;
+  background-color: rgb(177, 147, 255);
+  font-weight: 900;
+}
+#menuButtonContainer:hover > #menuButtonBackground {
+  transform: rotateY(-30deg);
+}
