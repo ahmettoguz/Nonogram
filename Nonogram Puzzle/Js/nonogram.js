@@ -8,9 +8,9 @@ function initializeVariables(difficulty) {
     totalC = 10;
     totalFilledBoxCount = 50;
   } else if (difficulty == "Hard") {
-    totalR = 20;
-    totalC = 20;
-    totalFilledBoxCount = 200;
+    totalR = 15;
+    totalC = 15;
+    totalFilledBoxCount = 150;
   }
 }
 
