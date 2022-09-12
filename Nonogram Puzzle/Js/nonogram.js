@@ -55,6 +55,8 @@ function difficultyButtonCssChanges(e) {
   });
 
   if (difficulty == "Easy") {
+    // play sound
+    click1Sound.cloneNode(true).play();
     $(e).css({
       "box-shadow": "2px 2px 4px black",
       "background-color": "lightgreen",
@@ -62,6 +64,8 @@ function difficultyButtonCssChanges(e) {
       transform: "scale(1.2)",
     });
   } else if (difficulty == "Medium") {
+    // play sound
+    click2Sound.cloneNode(true).play();
     $(e).css({
       "box-shadow": "2px 2px 4px black",
       "background-color": "yellow",
@@ -69,6 +73,8 @@ function difficultyButtonCssChanges(e) {
       transform: "scale(1.2) ",
     });
   } else if (difficulty == "Hard") {
+    // play sound
+    click3Sound.cloneNode(true).play();
     $(e).css({
       "box-shadow": "2px 2px 4px black",
       "background-color": "orangered",
@@ -104,6 +110,9 @@ function startScreenStartGame() {
     });
     currentPage = "end";
 
+    // play sound
+    startSound.cloneNode(true).play();
+
     startGame(currentDifficulty);
   }
 }
@@ -113,6 +122,9 @@ function gameFinish() {
     // display end screen
     $("#endScreenContainer").css("display", "flex");
     $("#endScreenContainer").animate({ opacity: "1" }, 500);
+
+    //play sound
+    finishSound.cloneNode(true).play();
   }, 500);
   console.log("Game Over Congratulations");
 }
@@ -424,11 +436,19 @@ function startBoxesClickEvents() {
       $(this).css("background-image", "none");
 
       if ($(this).hasClass("filled")) {
+        // play sound
+        vanish0Sound.cloneNode(true).play();
+
         $(this).css("background-image", "none");
         $(this).removeClass("filled");
       } else {
         $(this).css("background-image", "url(../Assets/Images/x1.png)");
         $(this).addClass("filled");
+
+        // play sound
+        let ran = Math.floor(Math.random() * 2);
+        if (ran == 0) pen0Sound.cloneNode(true).play();
+        else if (ran == 1) pen1Sound.cloneNode(true).play();
       }
     } else if (e.which == 3) {
       // right click
@@ -436,14 +456,24 @@ function startBoxesClickEvents() {
       $(this).css("background-image", "none");
 
       if ($(this).hasClass("unfilled")) {
+        // play sound
+        vanish0Sound.cloneNode(true).play();
+
         $(this).removeClass("unfilled");
         $(this).css("background-image", "none");
       } else {
+        // play sound
+        vanish1Sound.cloneNode(true).play();
+
         $(this).css("background-image", "url(../Assets/Images/o1.png)");
         $(this).addClass("unfilled");
       }
     } else {
       // middle click
+
+      // play sound
+      vanish0Sound.cloneNode(true).play();
+
       $(this).removeClass("filled");
       $(this).removeClass("unfilled");
       $(this).css("background-image", "none");
@@ -511,6 +541,9 @@ $(function () {
   // return menu screen button click
   $("#menuButtonContainer").on("click", function () {
     if (currentPage == "end") {
+      // play sound
+      start1Sound.cloneNode(true).play();
+
       // display start screen, remove end screen and play screen
       $("#startScreenContainer").css({ display: "flex", opacity: "1" });
 
@@ -532,6 +565,9 @@ $(function () {
 
   // play again button click
   $("#playAgainButtonContainer").on("click", function (e) {
+    // play sound
+    start1Sound.cloneNode(true).play();
+
     // remove modal
     $("#endScreenContainer").animate({ opacity: "0" }, 1000, function () {
       $("#endScreenContainer").css({ display: "none" });
@@ -552,3 +588,15 @@ totalFilledBoxCount = null;
 
 currentDifficulty = "Easy";
 currentPage = "start";
+
+// sounds
+const startSound = new Audio("../Assets/Audio/start0.mp3");
+const start1Sound = new Audio("../Assets/Audio/start1.mp3");
+const finishSound = new Audio("../Assets/Audio/finish0.mp3");
+const click1Sound = new Audio("../Assets/Audio/click1.mp3");
+const click2Sound = new Audio("../Assets/Audio/click2.mp3");
+const click3Sound = new Audio("../Assets/Audio/click3.mp3");
+const pen0Sound = new Audio("../Assets/Audio/pen0.mp3");
+const pen1Sound = new Audio("../Assets/Audio/pen1.mp3");
+const vanish0Sound = new Audio("../Assets/Audio/vanish0.mp3");
+const vanish1Sound = new Audio("../Assets/Audio/vanish1.mp3");
