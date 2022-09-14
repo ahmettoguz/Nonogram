@@ -484,6 +484,37 @@ function startBoxesClickEvents() {
     // cheat
     // console.log($(this).attr("class"));
   });
+
+  //hover event for info box color changes
+  $(".box")
+    .mouseenter(function () {
+      //get row and column info
+      let rowcol = $(this).attr("id").split("-");
+
+      //change css properties of that information box
+      $(`#boxInfoRowWise-${rowcol[0]}`).css(
+        "background-color",
+        " rgb(255, 200, 228)"
+      );
+      $(`#boxInfoColumnWise-${rowcol[1]}`).css(
+        "background-color",
+        " rgb(255, 200, 228)"
+      );
+    })
+    .mouseleave(function () {
+      //get row and column info
+      let rowcol = $(this).attr("id").split("-");
+
+      //change css properties of that information box
+      $(`#boxInfoRowWise-${rowcol[0]}`).css(
+        "background-color",
+        " rgb(237, 255, 243)"
+      );
+      $(`#boxInfoColumnWise-${rowcol[1]}`).css(
+        "background-color",
+        " rgb(237, 255, 243)"
+      );
+    });
 }
 
 function startGame(difficulty) {
