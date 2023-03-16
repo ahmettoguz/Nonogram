@@ -24,8 +24,6 @@ https://user-images.githubusercontent.com/101711642/189614885-5babfe9b-7b58-4bc5
 
 <br/>
 
-<br/>
-
 ## Introduction
 This project is a web based project of the puzzle game which is called Nonogram.
 
