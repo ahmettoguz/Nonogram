@@ -17,7 +17,7 @@ body {
   width: 100%;
   justify-content: flex-start;
   align-items: center;
-  background-image: url(../Assets/Images/background.png);
+  background-image: url(../Images/background.png);
   z-index: 1;
 }
 

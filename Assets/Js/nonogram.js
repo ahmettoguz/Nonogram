@@ -442,7 +442,7 @@ function startBoxesClickEvents() {
         $(this).css("background-image", "none");
         $(this).removeClass("filled");
       } else {
-        $(this).css("background-image", "url(../Assets/Images/x1.png)");
+        $(this).css("background-image", "url(./Assets/Images/x1.png)");
         $(this).addClass("filled");
 
         // play sound
@@ -465,7 +465,7 @@ function startBoxesClickEvents() {
         // play sound
         vanish1Sound.cloneNode(true).play();
 
-        $(this).css("background-image", "url(../Assets/Images/o1.png)");
+        $(this).css("background-image", "url(./Assets/Images/o1.png)");
         $(this).addClass("unfilled");
       }
     } else {
@@ -621,13 +621,13 @@ currentDifficulty = "Easy";
 currentPage = "start";
 
 // sounds
-const startSound = new Audio("../Assets/Audio/start0.mp3");
-const start1Sound = new Audio("../Assets/Audio/start1.mp3");
-const finishSound = new Audio("../Assets/Audio/finish0.mp3");
-const click1Sound = new Audio("../Assets/Audio/click1.mp3");
-const click2Sound = new Audio("../Assets/Audio/click2.mp3");
-const click3Sound = new Audio("../Assets/Audio/click3.mp3");
-const pen0Sound = new Audio("../Assets/Audio/pen0.mp3");
-const pen1Sound = new Audio("../Assets/Audio/pen1.mp3");
-const vanish0Sound = new Audio("../Assets/Audio/vanish0.mp3");
-const vanish1Sound = new Audio("../Assets/Audio/vanish1.mp3");
+const startSound = new Audio("./Assets/Audio/start0.mp3");
+const start1Sound = new Audio("./Assets/Audio/start1.mp3");
+const finishSound = new Audio("./Assets/Audio/finish0.mp3");
+const click1Sound = new Audio("./Assets/Audio/click1.mp3");
+const click2Sound = new Audio("./Assets/Audio/click2.mp3");
+const click3Sound = new Audio("./Assets/Audio/click3.mp3");
+const pen0Sound = new Audio("./Assets/Audio/pen0.mp3");
+const pen1Sound = new Audio("./Assets/Audio/pen1.mp3");
+const vanish0Sound = new Audio("./Assets/Audio/vanish0.mp3");
+const vanish1Sound = new Audio("./Assets/Audio/vanish1.mp3");
